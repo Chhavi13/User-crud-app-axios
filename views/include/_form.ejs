@@ -1,0 +1,43 @@
+<!-- form handling -->
+
+
+<form action="/api/users" method="POST" id="add_user">
+    <div class="row">
+        <div class="col-10">
+            <label for="fname">Name:</label>
+        </div>
+        <div class="col-90">
+            <input type="text" id="name" name="name" placeholder="Enter your first name">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10">
+            <label for="Email">Email:</label>
+        </div>
+        <div class="col-90">
+            <input type="email" id="email" name="email" placeholder="example@email.com">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-10">
+            <label for="gender" required>Gender:</label>
+        </div>
+        <div class="col-90">
+            <input type="radio" id="radio2" name="gender" value="male" />Male
+            <input type="radio" id="radio3" name="gender" value="female" />Female
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10">
+            <label for="Status" required>Status:</label>
+        </div>
+        <div class="col-90">
+            <input type="radio" id="radio4" name="status" value="Active" />Active
+            <input type="radio" id="radio5" name="status" value="inactive" />inactive
+        </div>
+    </div>
+
+    <button type="submit">Save</button>
+
+</form>

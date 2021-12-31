@@ -1,0 +1,85 @@
+<!-- include header -->
+<%-include('include/_header')%>
+<!-- /include header -->
+
+<!-- main site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+            
+        </div>
+
+        <main id="site-main">
+            <div class="container">
+                <div class="box-nav d-flex-justify-between">
+                    <a href="/" class="border-shadow"><br>
+    
+                     <span class="text-gradient" >Show all User <i class="fas fa-user"></i></span>
+                    </a>
+                </div>
+                <br>
+
+                <span >Update User<br> <i >use the below form to update an account</i>
+       
+<!-- add user form -->
+ <!-- form handling -->
+   
+
+ <form method="POST" id="update_user">
+    <div class="row">
+        <div class="col-10">
+            <label for="name">Name:</label>
+        </div>
+        <div class="col-90">
+            <input type="hidden"  name="id" value="<%= user._id %>" >
+        </div>
+        <div class="col-90">
+            <input type="text" id="name" name="name" value="<%= user.name %>" placeholder="Enter your first name">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10">
+            <label for="email">Email:</label>
+        </div>
+        <div class="col-90">
+            <input type="email" id="email" name="email"  value="<%= user.email %>" placeholder="example@email.com">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-10">
+            <label for="gender" required>Gender:</label>
+        </div>
+        <div class="col-90">
+            <input type="radio" id="radio2" name="gender" value="male" >Male
+            <input type="radio" id="radio3" name="gender" value="female" >Female
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10">
+            <label for="status" required>Status:</label>
+        </div>
+        <div class="col-90">
+            <input type="radio" id="radio4" name="status" value="Active" >Active
+            <input type="radio" id="radio5" name="status" value="inactive"  >inactive
+        </div>
+    </div>
+   
+        <button type="submit" >Save</button>
+  
+ </form>
+
+    
+     
+ 
+    </div>
+
+
+</main>
+<!-- /main site -->
+
+
+
+<!-- include footer -->
+<%-include('include/_footer')%>
+<!-- /include footer -->
